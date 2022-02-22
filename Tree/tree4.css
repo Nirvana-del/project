@@ -1,0 +1,113 @@
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    /*初始状态 透明度为0*/
+    40% {
+        opacity: 0;
+    }
+
+    /*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+
+    /*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-in {
+
+    /*针对webkit内核*/
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.anim-fadein {
+    animation: fade-in;
+    /*动画名称*/
+    animation-duration: 1.5s;
+    /*动画持续时间*/
+    -webkit-animation: fade-in 1.5s;
+    /*针对webkit内核*/
+}
+.ps{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+.panel{
+	height: 30rem;
+}
+/* .jiedian {
+    margin-top: 3.066667rem;
+    margin-left: .133333rem;
+} */
+.huff_tree {
+
+    display: block;
+	margin: 0 auto;
+   /* position: absolute; */
+    /* left: 100px; */
+    /* width: 600px;
+   height: 700px;
+    background-color: #1B6D85; */
+}
+@media screen and (max-width: 768px) {
+    .huff_tree {
+        transform: scale(0.75);
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .huff_tree {
+        transform: scale(0.55);
+    }
+  }
+
+.huff_tree li {
+   position: absolute;
+   /* left: 300px;
+    top: 0; */
+    height: 26px;
+    width: 26px;
+     margin-left: 30px; 
+    border:1px solid rgb(150,197,185);
+    background-color: rgb(150,197,185);
+    color: #fff;
+    /* border-color: blue; */
+    /* background-color: #fff; */
+    border-radius: 100%;
+    text-align: center;
+    line-height: 26px;
+    font-size: 13px;
+    z-index: 2;
+    display: none;
+
+
+    margin-top: 80px;
+    /* transform: scale(0.1); */
+}
+.huff_tree li div {
+    color: #000;
+}
+.line {
+    /* display: none; */
+    position: absolute;
+    background: rgb(150,197,185);
+    height: 3px;
+    /* z-index: 1; */
+    /*这里设置大于2，即可看到真正连线的其实是两个元素的中心坐标*/
+
+    margin-top: 80px;
+    /* transform: scale(0.1); */
+}

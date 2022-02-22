@@ -1,0 +1,251 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    /*初始状态 透明度为0*/
+    40% {
+        opacity: 0;
+    }
+
+    /*过渡状态 透明度为0*/
+    100% {
+        opacity: 1;
+    }
+
+    /*结束状态 透明度为1*/
+}
+
+@-webkit-keyframes fade-in {
+
+    /*针对webkit内核*/
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+    .tree {
+        transform: scale(0.75);
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .tree {
+        transform: scale(0.55);
+    }
+  }
+
+.anim-fadein {
+    animation: fade-in;
+    /*动画名称*/
+    animation-duration: 1.5s;
+    /*动画持续时间*/
+    -webkit-animation: fade-in 1.5s;
+    /*针对webkit内核*/
+}
+
+.ps{
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* p {
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    font-size: 20px;
+} */
+
+.node {
+    /* position: relative;
+    top: 200px;
+    left: 300px; */
+	/* overflow: hidden; */
+}
+
+.node li {
+    /* float: left; */
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+    border: solid;
+    /* border-color: blue; */
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+	display: none;
+}
+
+/* input {
+    position: absolute;
+    top: 500px;
+    left: 300px;
+    height: 30px;
+    width: 80px;
+    border: 2px solid;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 16px;
+} */
+.panel{
+	height: 30rem;
+}
+.tree{
+   /* position: absolute;
+    left: 50px;
+    height: 450px; */
+    /* width: 800px; */
+    background-color: pink;
+    /* z-index: 1; */
+	display: block;
+	margin: -15px auto 0;
+	position: relative;
+}
+.tree ul {
+    /* position: relative; */
+}
+.tree ul li {
+    position: absolute;
+    display: none;
+    height: 40px;
+    width: 40px;
+    border: solid;
+    background-color: white;
+    /* border-color: blue; */
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    z-index: 3;
+}
+.tree ul li:nth-child(1){
+    /* position: absolute; */
+    top: 1.875rem;
+    left: 11.875rem;
+}
+.tree ul li:nth-child(2){
+    position: absolute;
+    top: 7.5rem;
+    left: 4.875rem;
+}
+.tree ul li:nth-child(3){
+    /* position: absolute; */
+    top: 7.5rem;
+    left: 18.25rem;
+}
+.tree ul li:nth-child(4){
+    /* position: absolute; */
+    top: 13.75rem;
+    left: -0.25rem;
+}
+.tree ul li:nth-child(5){
+    /* position: absolute; */
+    top: 13.75rem;
+    left: 8.3125rem;
+}
+.tree ul li:nth-child(6){
+    /* position: absolute; */
+    top: 13.75rem;
+    left: 15.5625rem;
+}
+.tree ul li:nth-child(7){
+    /* position: absolute; */
+    top: 13.75rem;
+    left: 22.875rem;
+}
+.tree ul li:nth-child(8){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: -4.9375rem;
+}
+.tree ul li:nth-child(9){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 1.8125rem;
+}
+.tree ul li:nth-child(10){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 5.9375rem;
+}
+.tree ul li:nth-child(11){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 10.4375rem;
+}
+.tree ul li:nth-child(12){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 13.4375rem;
+}
+.tree ul li:nth-child(13){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 17.375rem;
+}
+.tree ul li:nth-child(14){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 20.8125rem;
+}
+.tree ul li:nth-child(15){
+    /* position: absolute; */
+    top: 19.375rem;
+    left: 26.5rem;
+}
+
+
+/* 线段样式 */
+.line {
+    position: absolute;
+    /* display: none; */
+    background: #34be95;
+    height: 3px;
+    z-index: 1;
+    /*这里设置大于2，即可看到真正连线的其实是两个元素的中心坐标*/
+  }
+
+.res {
+    position: absolute;
+    display: flex;
+    top: 600px;
+    left: 100px;
+    /* width: 800px; */
+    height: 250px;
+    background-color: pink;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.res ul {
+    /* position: absolute; */
+    display: flex;
+    width: 800px;
+    height: 60px;
+    background-color: skyblue;
+}
+.res li {
+    float: left;
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin-left: 30px;
+    border: solid;
+    /* border-color: blue; */
+    border-radius: 100%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}

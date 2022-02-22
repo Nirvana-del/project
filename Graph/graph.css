@@ -1,0 +1,61 @@
+@media screen and (max-width: 768px) {
+    .graph_node {
+        transform: scale(0.75);
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .graph_node {
+        transform: scale(0.55);
+    }
+  }
+.container2{
+	
+    margin: 0 auto;
+	/* display: flex; */
+}
+.node{
+ width: 100px;
+ min-height: 100px;
+}
+.circle{
+ margin: 0 auto;
+ width: 50px;
+ height: 50px;
+}
+.start h3{
+	color: #38eabe;
+}
+.way h4{
+	color: #3888ad;
+}
+.row h4{
+	color: #38eabe;
+}
+.row h3{
+	color: #38eabe;
+}
+.row label{
+	color: #38eabe;
+}
+/* .graph_node{
+	
+} */
+.graph_node li{
+	color: #000;
+	height: 40px;
+	width: 40px;
+	text-align: center !important;
+	margin-left: 10px;
+	border: solid #41c5c5;
+	border-radius: 100%;
+	line-height: 40px;
+	font-size: 20px;
+}
+.graph_node2 li{
+	font-size: 1.5rem;
+}
+#node{
+    width: 80px;
+    display:block;
+}

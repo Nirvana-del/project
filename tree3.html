@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="x-ua-compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit" />
+		<title>树应用</title>
+		<link rel="stylesheet" href="css/set.css">
+		<link rel="stylesheet" href="iconfont/css/iconfont.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" href="Graph/graph.css">
+		<link rel="stylesheet" href="Tree/tree.css">
+		<style>
+			body {
+				color: #38eabe;
+			}
+
+			ul {
+				list-style-type: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!--app-->
+		<div id="app">
+			<!--顶部-->
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header nava">
+						<!--小屏幕导航按钮-->
+						<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!--logo-->
+						<a href="index.html" class="navbar-brand">图与树应用数据可视化系统</a>
+					</div>
+					<!--小屏幕导航-->
+					<div class="navbar-collapse collapse nava">
+						<ul class="nav navbar-nav">
+							<li><a class="myindex" href="index.html"><span
+										class="glyphicon glyphicon-home">前台首页</span></a></li>
+							<li><a href="tree1.html"><span class="glyphicon glyphicon-tree-deciduous">树应用</span></a></li>
+							<li><a href="Graph1.html"><span class="glyphicon glyphicon-book">图应用</span></a></li>
+						</ul>
+						<!--Admin-->
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">
+									<span class="glyphicon glyphicon-user"></span>
+									Admin
+									<span class="caret"></span>
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="dLabel">
+									<li><a href="index.html">
+											<span class="glyphicon glyphicon-home"></span>&nbsp;前台首页
+										</a></li>
+									<li><a href="tree1.html"><span class="glyphicon glyphicon-tree-deciduous">树应用</span></a></li>
+									<li><a href="Graph1.html"><span class="glyphicon glyphicon-book">图应用</span></a></li>
+								</ul>
+							</li>
+							<li class="closes"><a href="javascript:close();"><span
+										class="glyphicon glyphicon-off"></span>&nbsp;退出</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!--下边栏-->
+			<div class="tabs">
+				<div>
+					<router-view></router-view>
+					<ul class="tab">
+						<li><span class="iconfont icon-jitiwendu-02"></span><a href="tree1.html">先序遍历</a></li>
+						<li><span class="iconfont icon-xintiao"></span><a href="tree2.html">中序遍历</a></li>
+						<li><span class="iconfont icon-xieya"></span><a href="tree3.html">后序遍历</a></li>
+						<li><span class="iconfont icon-tubiao_-"></span><a href="tree4.html">哈夫曼树</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--自定义组件-->
+		<!--先序遍历-->
+		<template id="temp">
+			<div class="temp details container">
+				<div class="row">
+					<div class="col-md-12 col-xs-12 col-lg-12 col-sm-12">
+						<div class="panel panel-default">
+							<div class="panel-heading">后序遍历</div>
+							<div class="panel-body">
+								<!--图的遍历-->
+								<div class="test">
+									<!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+									<div class="container2">
+										<div class="row">
+											<!-- <p>节点输入：</p> -->
+											<div class="control col-xs-12 col-sm-12 col-md-12 col-lg-6 ps">
+												<button class="btn_last btn-info btn">后序遍历</button>		
+												<button class="btn btn-info" id="reset">重置结点</button>
+												<!-- <button class="btn btn-info" id="da">节点删除</button> -->
+												<h4 style="color:rgb(49,176,213);">节点插入</h4>
+												<small style="float: left;color:rgb(236,94,89);">注:PC端可按回车键生成结点</small>
+												<input class="form-control" type="text" id="ins" placeholder="点击空白处生成结点">
+												<ul class="node">
+												</ul>
+											</div>
+											<div class="control col-xs-12 col-sm-12 col-md-12 col-lg-6">
+											<div class="tree">
+												<ul class="tree_node ps">
+													<li class="one"></li>
+													<li class="two"></li>
+													<li class="three"></li>
+													<li class="four"></li>
+													<li class="five"></li>
+													<li class="six"></li>
+													<li class="seven"></li>
+													<li class="eight"></li>
+													<li class="nine"></li>
+													<li class="ten"></li>
+													<li class="eleven"></li>
+													<li class="twelve"></li>
+													<li class="thirteen"></li>
+													<li class="fourteen"></li>
+													<li class="fifteen"></li>
+												</ul>
+											</div>
+											<div class="res">
+												<ul class="pre"></ul>
+												<ul class="mid"></ul>
+												<ul class="last"></ul>
+											</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		
+		
+	</body>
+	<!--vue-->
+	<script src="js/vue.min.js"></script>
+	<script src="js/vue-rooter.min.js"></script>
+	<!--bootstrap-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<!--自定义-->
+	<script src="js/Myvue.js"></script>
+	<script src="js/set.js"></script>
+	<script src="js/ytmenu.js"></script>
+	<script src="Tree/tree3.js"></script>
+</html>
